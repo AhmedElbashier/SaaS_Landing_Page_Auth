@@ -3,9 +3,10 @@
 import * as React from "react";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Zap } from "lucide-react";
+import { Show, UserButton } from "@clerk/nextjs";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -57,8 +58,16 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <Button variant="ghost" className="text-sm font-medium">Log in</Button>
-          <Button className="text-sm font-medium">Get Started</Button>
+          <Show when="signed-out">
+            <Link href="/sign-in" className={buttonVariants({ variant: "ghost", className: "text-sm font-medium" })}>Log in</Link>
+            <Link href="/sign-up" className={buttonVariants({ className: "text-sm font-medium" })}>Get Started</Link>
+          </Show>
+          <Show when="signed-in">
+            <Link href="/dashboard" className={buttonVariants({ variant: "ghost", className: "text-sm font-medium" })}>Dashboard</Link>
+            <div className="h-8 w-8 flex items-center justify-center">
+              <UserButton />
+            </div>
+          </Show>
         </div>
 
         {/* Mobile Nav */}
@@ -83,8 +92,16 @@ export function Navbar() {
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4 pb-8">
-                  <Button variant="outline" className="w-full">Log in</Button>
-                  <Button className="w-full">Get Started</Button>
+                  <Show when="signed-out">
+                    <Link href="/sign-in" className={buttonVariants({ variant: "outline", className: "w-full" })}>Log in</Link>
+                    <Link href="/sign-up" className={buttonVariants({ className: "w-full" })}>Get Started</Link>
+                  </Show>
+                  <Show when="signed-in">
+                    <Link href="/dashboard" className={buttonVariants({ variant: "outline", className: "w-full" })}>Dashboard</Link>
+                    <div className="flex justify-center mt-2">
+                      <UserButton />
+                    </div>
+                  </Show>
                 </div>
               </div>
             </SheetContent>
