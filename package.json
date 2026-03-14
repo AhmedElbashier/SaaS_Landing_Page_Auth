@@ -1,6 +1,7 @@
 {
-  "name": "saas-app",
+  "name": "saasify-landing-and-dashboard",
   "version": "0.1.0",
+  "description": "A high-end SaaS Landing Page and Dashboard built with Next.js 15, Shadcn UI, Clerk Auth, and Recharts.",
   "private": true,
   "scripts": {
     "dev": "next dev",

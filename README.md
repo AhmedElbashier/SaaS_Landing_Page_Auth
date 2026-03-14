@@ -1,9 +1,11 @@
 <div align="center">
   <img alt="Project Logo" src="https://via.placeholder.com/150x150?text=Logo" width="120" />
 
-  # 🚀 Elevate SaaS: Next.js 15 Landing Page
+  # 🚀 Elevate SaaS: Next.js 15 Landing Page & Dashboard
 
-  **A beautifully crafted, high-performance, and conversion-optimized SaaS landing page built with the modern web stack.**
+  **A beautifully crafted, high-performance, and conversion-optimized SaaS landing page and authenticated dashboard built with the modern web stack.**
+
+  ### 🔗 [Live Demo on Vercel](https://saa-s-landing-page-auth.vercel.app/)
 
   [![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -11,6 +13,7 @@
   [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
   [![Clerk](https://img.shields.io/badge/Clerk_Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)](https://clerk.com/)
   [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+  [![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge&logo=react&logoColor=white)](https://recharts.org/)
   [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 </div>
 
@@ -18,7 +21,7 @@
 
 ## 📖 Overview
 
-Welcome to the **Next.js 15 SaaS Landing Page** project. This repository provides a solid, production-ready foundation for your next Software-as-a-Service product. Designed with aesthetics and performance in mind, it leverages the latest Next.js App Router features, stunning UI components from shadcn/ui, and seamless authentication via Clerk.
+Welcome to the **Next.js 15 SaaS Landing Page & Dashboard** project. This repository provides a solid, production-ready foundation for your next Software-as-a-Service product. Designed with aesthetics and performance in mind, it leverages the latest Next.js App Router features, stunning UI components from shadcn/ui, seamless authentication via Clerk, and rich data visualizations with Recharts.
 
 Whether you're building a B2B platform, an AI tool, or a consumer app, this landing page is architected to give you a massive head start.
 
@@ -28,6 +31,7 @@ Whether you're building a B2B platform, an AI tool, or a consumer app, this land
 - 🎨 **Sleek, Modern UI:** Professionally designed using **Tailwind CSS** and **shadcn/ui**.
 - 🌓 **Dark Mode Ready:** Out-of-the-box support for light and dark themes with `next-themes`.
 - 🔐 **Authentication:** Secure and scalable user management powered by **Clerk Auth** (including Social Auth).
+- 📊 **Rich Dashboards:** High-end data visualizations and charts built with **Recharts**.
 - 🎬 **Fluid Animations:** Engaging micro-interactions and scroll reveals using **Framer Motion**.
 - 📱 **Fully Responsive:** Flawless experience across desktop, tablet, and mobile devices.
 - 🚀 **SEO Optimized:** Best practices for meta tags, technical SEO, and semantic HTML implemented.
