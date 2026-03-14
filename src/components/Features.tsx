@@ -1,5 +1,8 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Activity, ShieldCheck, Zap, Globe, Cpu, Layers } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Features() {
   const features = [
@@ -47,8 +50,27 @@ export function Features() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring" as const, stiffness: 100, damping: 10 },
+    },
+  };
+
   return (
-    <section id="features" className="py-24 bg-muted/30">
+    <section id="features" className="py-24 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
@@ -59,9 +81,16 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {features.map((feature, index) => (
-            <Card key={index} className="bg-background/60 backdrop-blur-sm border-border hover:shadow-lg transition-all duration-300">
+            <motion.div key={index} variants={itemVariants}>
+              <Card className="h-full bg-background/60 backdrop-blur-sm border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${feature.bgColor} ${feature.color}`}>
                   <feature.icon className="w-6 h-6" />
@@ -73,9 +102,10 @@ export function Features() {
                   {feature.description}
                 </CardDescription>
               </CardContent>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
