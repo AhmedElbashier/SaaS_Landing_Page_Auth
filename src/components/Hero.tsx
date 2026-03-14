@@ -7,8 +7,8 @@ export function Hero() {
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 inset-x-0 h-[500px] pointer-events-none dark:hidden">
-        <div className="absolute top-0 right-1/4 translate-x-1/2 w-[800px] h-[400px] bg-red-100/50 rounded-full blur-3xl opacity-50" />
-        <div className="absolute top-20 left-1/4 -translate-x-1/2 w-[600px] h-[400px] bg-blue-100/50 rounded-full blur-3xl opacity-50" />
+        <div className="absolute top-0 right-1/4 translate-x-1/2 w-[800px] h-[400px] bg-indigo-100/50 rounded-full blur-3xl opacity-50" />
+        <div className="absolute top-20 left-1/4 -translate-x-1/2 w-[600px] h-[400px] bg-slate-200/50 rounded-full blur-3xl opacity-50" />
       </div>
       <div className="absolute top-0 inset-x-0 h-[500px] pointer-events-none hidden dark:block">
         <div className="absolute top-0 right-1/4 translate-x-1/2 w-[800px] h-[400px] bg-indigo-900/20 rounded-full blur-[120px]" />
